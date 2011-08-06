@@ -15,7 +15,7 @@ var PachubeFunctions =
 		}
 		var loader = Titanium.Network.createHTTPClient();
 		loader.onload = onload;
-		if(!onerror) loader.onerror = onerror;
+		if(onerror) loader.onerror = onerror;
 		loader.open("GET", url);
 		loader.send();
 	},
@@ -34,7 +34,7 @@ var PachubeFunctions =
 		}
 		var loader = Titanium.Network.createHTTPClient();
 		loader.onload = onload;
-		if(!onerror) loader.onerror = onerror;
+		if(onerror) loader.onerror = onerror;
 		loader.open("POST", url);
 		loader.send(data);
 	},
@@ -53,7 +53,7 @@ var PachubeFunctions =
 			else if(this.apikey == "") this.apikey = key;
 		var loader = Titanium.Network.createHTTPClient();
 		loader.onload = onload;
-		if(!onerror) loader.onerror = onerror;
+		if(onerror) loader.onerror = onerror;
 		loader.open("POST", url);
 		loader.send(data);
 	},
@@ -71,7 +71,7 @@ var PachubeFunctions =
 		}
 		var loader = Titanium.Network.createHTTPClient();
 		loader.onload = onload;
-		if(!onerror) loader.onerror = onerror;
+		if(onerror) loader.onerror = onerror;
 		loader.open("POST", url);
 		loader.setRequestHeader("X-PachubeApiKey", key);
 		loader.send();
